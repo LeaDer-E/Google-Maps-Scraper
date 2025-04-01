@@ -5,6 +5,15 @@ This repository contains two Python scripts for scraping place details from Goog
 1. **`G-Maps_Scrapper.py`**: Scrapes data for a specific place in a single area.
 2. **`G-Maps_Multiply_Scrapper.py`**: Scrapes data for a specific place across multiple areas listed in `Areas.txt`.
 
+
+## Features
+* Scrapes business details such as name, description, address, phone number, and website.
+* Supports both single-area and multiple-area searches.
+* Saves extracted data into well-formatted Excel files.
+* Includes automatic handling of duplicates.
+* Customizable search parameters.
+* Error logging to help debug issues.
+
 ## Prerequisites
 - Python 3.x
 - Install the required libraries:
@@ -65,21 +74,75 @@ Failed to load details panel for element 3
 You might notice duplicated entries in the console output:
 ```text
 ────────────────────────────────────────────────────────────
-Extracted: اكسترا
-Description: متجر أجهزة إلكترونية
-Address: طريق الملك عبدالعزيز الفرعي، حي الملك سلمان، الرياض 12434، المملكة العربية السعودية
-Phone Number: +966 800 124 0900
-Website: https://www.extra.com/ar-sa
+Extracted: Place Name
+Description: #####
+Address: ##############################
+Phone Number: +20 ### ### #####
+Website: https://www.#########.com
 ────────────────────────────────────────────────────────────
-Extracted: اكسترا
-Description: متجر أجهزة إلكترونية
-Address: طريق الملك عبدالعزيز الفرعي، حي الملك سلمان، الرياض 12434، المملكة العربية السعودية
-Phone Number: +966 800 124 0900
-Website: https://www.extra.com/ar-sa
+Extracted: Place Name
+Description: #####
+Address: ##############################
+Phone Number: +20 ### ### #####
+Website: https://www.#########.com
 ```
+
 **Explanation**: Duplicates can occur due to how Google Maps lists places, especially across different regions. This is intentional to ensure no data is missed.
 
 **Solution**: Duplicates are automatically removed in the final Excel file using `pandas.drop_duplicates()`, ensuring the output is clean and unique.
+
+
+## Logging & Debugging
+* The script logs errors like missing data or XPath issues.
+  Common errors include:
+  ```
+  Error extracting details for element 1
+  Failed to load details panel for element 2
+  ```
+
+  ```
+  Error extracting details for element 231
+  Extracted: #############
+  Description: مقهى 
+  Address: ################################3
+  Phone Number: 011 ############
+  Website: https://www.facebook.com/####################
+  ────────────────────────────────────────────────────────────
+  Error extracting details for element 233
+  Extracted: #############
+  Description: مقهى 
+  Address: ################################3
+  Phone Number: 011 ############
+  Website: https://www.facebook.com//####################
+  ────────────────────────────────────────────────────────────
+  Error extracting details for element 235
+  Extracted: #############
+  Description: مقهى 
+  Address: ################################3
+  Phone Number: 011 ############
+  Website: https://www.facebook.com//####################
+  ────────────────────────────────────────────────────────────
+  Error extracting details for element 237
+  Extracted: #############
+  Description: مقهى 
+  Address: ################################3
+  Phone Number: 011 ############
+  Website: https://www.facebook.com//####################
+  ────────────────────────────────────────────────────────────
+  Error extracting details for element 239
+  Extracted: #############
+  Description: مقهى 
+  Address: ################################3
+  Phone Number: 011 ############
+  Website: https://www.facebook.com//####################
+  ────────────────────────────────────────────────────────────
+  Error extracting details for element 241
+  Error extracting details for element 242
+  ```
+* These errors are non-critical and occur due to Google Maps' structure changes.
+* The script logs duplicates but removes them in the final output.
+* you have to wait the code untill it's finished to get the stored data.
+
 
 ## Notes
 - **First Script (`G-Maps_Scrapper.py`)**: Prompts the user for both the place and area, then extracts data for that specific area.
