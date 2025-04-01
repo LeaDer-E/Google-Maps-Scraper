@@ -171,3 +171,5 @@ Website: https://www.#########.com
 - **Excel Output**: Both scripts format the Excel file with a black background, white/orange/dark yellow text, and dark gray borders. The second script adds an "Area" column.
 - **README.md**: Fully in English, it explains usage, formatting, and addresses your specific questions about errors and duplicates.
 
+## License
+* This project is licensed under the MIT License - see the LICENSE file for details.
