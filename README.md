@@ -1,10 +1,15 @@
 # Google Maps Scraper
 
-## Description
 This repository contains two Python scripts for scraping place details from Google Maps:
 1. **`G-Maps_Scrapper.py`**: Scrapes data for a specific place in a single area.
 2. **`G-Maps_Multiply_Scrapper.py`**: Scrapes data for a specific place across multiple areas listed in `Areas.txt`.
 
+# Important Note:
+* When Code Told You `Found 244 places` and Extract in Excel Sheet only `122 Place` That Mean It's Found Only `122 Place` From G-Maps but It's Read `244 XPATH`.
+* When You Found `Error extracting details for element 16` That Mean Ther's No XPATH Clickable Here and Ther's No Place Found.
+* You Can Change `chrome_options.headless` To `False` in The Code to be `chrome_options.headless = False` and You Will Know That The Script Extract All The Places Found From G-Maps.
+* So Any `Error extracting details for element` Don't Care About It.
+* Any Duplicated Value Founds In Terminal It Will Not Extract At Excel Sheet. **(Fixed)**
 
 ## Features
 * Scrapes business details such as name, description, address, phone number, and website.
