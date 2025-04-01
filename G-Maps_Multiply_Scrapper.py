@@ -286,10 +286,13 @@ def extract_all():
         except Exception:
             print(Fore.RED + f"Error extracting details for element {idx}" + Style.RESET_ALL)
             continue
-    
+
+    return results
+
+    '''
     if results:
         today_date = datetime.now().strftime("%m-%d %H-%M-%S")
-        filename = f"{search_places} in {search_area} at {today_date}.xlsx"
+        filename = f"{search_places} in Multiply Area at {today_date}.xlsx"
         df = pd.DataFrame(results)
         df.to_excel(filename, index=False)
 
@@ -299,7 +302,8 @@ def extract_all():
         print(Fore.GREEN + f"✅ Data extracted and saved to {filename}" + Style.RESET_ALL)
     else:
         print(Fore.RED + "No data was extracted" + Style.RESET_ALL)
-
+    '''
+    
 
 
 # Function to format the Excel file
