@@ -173,3 +173,32 @@ Website: https://www.#########.com
 
 ## License
 * This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+# Merge Excel Sheets and Apply Formatting
+
+This script merges multiple Excel sheets from a specified folder into a single file while maintaining the original formatting. It also removes duplicate rows to ensure clean data output.
+
+### Features:
+- Reads all Excel files in the `ready/` folder.
+- Extracts only columns A to F from each file.
+- Merges data into one file and removes duplicate rows.
+- Formats the output file with:
+  - Black background for all cells.
+  - White, orange, and dark yellow font colors based on content.
+  - Column width adjustments and row height styling.
+  - Centered text alignment.
+  - Frozen panes for better navigation.
+
+### Usage:
+1. Place all Excel files inside the `ready/` folder.
+2. Run the script to generate a merged and formatted output file.
+3. The final file will be saved as `merged_output.xlsx` in the same code directory.
+
+### Code Reference:
+```python
+folder_path = "ready/"  # Change this to the folder containing the Excel files
+output_file = "merged_output.xlsx"
+merge_excel_sheets(folder_path, output_file)
+```
+
