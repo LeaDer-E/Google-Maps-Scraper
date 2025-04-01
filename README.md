@@ -21,10 +21,26 @@ This repository contains two Python scripts for scraping place details from Goog
 
 ## Prerequisites
 - Python 3.x
-- Install the required libraries:
+- Google Chrome installed
+- undetected-chromedriver
+- Chrome WebDriver compatible with your Chrome version
+- selenium
+- pandas
+- openpyxl
+- colorama
+
+
+## Installation
+* Clone this repository:
+  ```bash
+  git clone https://github.com/your-repo/google-maps-scraper.git
+  cd google-maps-scraper
+  ```
+* Install dependencies:
   ```bash
   pip install selenium pandas openpyxl colorama undetected-chromedriver
   ```
+
 
 ## Usage
 ### 1. `G-Maps_Scrapper.py`
