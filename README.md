@@ -75,7 +75,7 @@ Failed to load details panel for element 3
 
 **Impact**: These errors are non-critical and are included to ensure no place is skipped. They do not affect the overall functionality.
 
-### Why Duplicated Items?
+### Why Duplicated Items? **(It Should Be Fixed)**
 You might notice duplicated entries in the console output:
 ```text
 ────────────────────────────────────────────────────────────
