@@ -22,7 +22,7 @@ python G-Maps_Scrapper.py
 ```
 
 **Input**:
-- Enter the place to search for (e.g., "Net Cafe").
+- Enter the place to search for (e.g., "Store").
 - Enter the area to search in (e.g., "Saudi Arabia").
 
 **Output**: An Excel file named `<place> in <area> at <timestamp>.xlsx` with formatted data.
@@ -36,7 +36,7 @@ python G-Maps_Multiply_Scrapper.py
 ```
 
 **Input**:
-- Enter the place to search for (e.g., "Net Cafe").
+- Enter the place to search for (e.g., "Store").
 - The areas are read from `Areas.txt` (one area per line, e.g., "Saudi Arabia", "Egypt", "Libya").
 
 **Output**: A single Excel file named `<place> in Multiple Areas at <timestamp>.xlsx` with data from all areas.
