@@ -175,30 +175,39 @@ Website: https://www.#########.com
 * This project is licensed under the MIT License - see the LICENSE file for details.
 
 
-# Merge Excel Sheets and Apply Formatting
+# **Merge and Format Excel Sheets**  
 
-This script merges multiple Excel sheets from a specified folder into a single file while maintaining the original formatting. It also removes duplicate rows to ensure clean data output.
+This script processes multiple Excel files from a specified folder, merges their data, removes duplicates, and applies professional formatting for better readability.  
 
-### Features:
-- Reads all Excel files in the `ready/` folder.
-- Extracts only columns A to F from each file.
-- Merges data into one file and removes duplicate rows.
-- Formats the output file with:
-  - Black background for all cells.
-  - White, orange, and dark yellow font colors based on content.
-  - Column width adjustments and row height styling.
-  - Centered text alignment.
-  - Frozen panes for better navigation.
+## **Features**  
 
-### Usage:
-1. Place all Excel files inside the `ready/` folder.
-2. Run the script to generate a merged and formatted output file.
-3. The final file will be saved as `merged_output.xlsx` in the same code directory.
+* Reads all Excel files in the `ready/` folder.  
+* Extracts only columns **A to F** from each file.  
+* Cleans data by removing extra spaces and hidden characters.  
+* Removes rows where both **Phone Number** and **Website** are empty.  
+* Deduplicates records based on **Phone Number** and **Website** (keeping only the first occurrence).  
+* Sorts data for better organization.  
+* Formats the final Excel sheet with:  
+   - **Black background** for all cells.  
+   - **White, orange, and dark yellow fonts** based on content.  
+   - **Column width adjustments** and **row height styling**.  
+   - **Centered text alignment** for better readability.  
+   - **Frozen panes** at cell B2 for easier navigation.  
 
-### Code Reference:
+## **Usage**  
+
+1. Place all Excel files inside the `ready/` folder.  
+2. Run the script to generate a cleaned, merged, and formatted Excel file.  
+3. The final file will be saved as `merged.xlsx` in the same directory as the script.  
+
+## **Code Reference**  
+
 ```python
-folder_path = "ready/"  # Change this to the folder containing the Excel files
-output_file = "merged_output.xlsx"
-merge_excel_sheets(folder_path, output_file)
+folder_path = "ready/"  # Change this if needed
+output_file = "merged.xlsx"
+merge_and_filter(folder_path, output_file)
 ```
+
+Run the script and let it handle the rest! 🚀
+
 
